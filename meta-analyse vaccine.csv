@@ -1,0 +1,17 @@
+Study,year,Vaccine,wider_study,type,vaccine_type,setting,sample,responder
+Groot et al,1965,YF 17D ,1,obs,17D,endemic,298,282
+Groot et al,1965,YF 17D (2),2,obs,17D,endemic,387,363
+Guerra et al,1997,YF 17D ,3,obs,17D,endemic,173,131
+Reinhardt et al,1998,YF 17D ,4,obs,17D,not_endemic,12,12
+Monath et al,2002,17D ARILVAX,5,rct,17D,not_endemic,720,708
+Monath et al,2002,17D YF-VAX,5,rct,17D,not_endemic,720,715
+Vazquez et al,2003,YF 17D ,6,obs,17D,endemic,17,16
+Tavares-Neto et al,2004,YF 17D ,7,obs,17D,endemic,145,130
+Camacho et al,2004,17DD-013Z,8,rct,17DD,not_endemic,209,205
+Camacho et al,2004,17DD-102/84,8,rct,17DD,not_endemic,193,192
+Camacho et al,2004,17D-213/77,8,rct,17D,not_endemic,211,210
+Belmusto-Worn et al,2005,17D ARILVAX,9,rct,17D,endemic,652,619
+Belmusto-Worn et al,2005,17D YF-VAX,9,rct,17D,endemic,329,298
+Pfister et al,2005,YF 17D ,10,rct,17D,not_endemic,304,304
+Suzano et al,2006,YF 17DD ,11,obs,17DD,endemic,433,425
+de Melo et al,2011,YF 17DD ,12,obs,17DD,traveler,238,238
