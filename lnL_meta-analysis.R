@@ -100,10 +100,10 @@ dev.off()
 ###################################
 ### meta-regression
 
-tab = read.csv("meta-analyse vaccine.csv", h=T)
+tab2 = read.csv("meta-analyse vaccine.csv", h=T)
 
 # if we exclude the 0.75% efficacy study (3rd line)
-tab= tab[-3,]
+tab= tab2[-3,]
 tab
 
 tab$Study=paste(tab$Study, tab$Vaccine, sep=", ")
