@@ -3,8 +3,8 @@ rm(list=ls(all=TRUE))
 
 setwd("Y:/Kevin/brouillons/meta-analysis vaccine")
 
-library(Hmisc)
-library(ggplot2)
+# library(Hmisc)
+# library(ggplot2)
 library(nlme) #for BIC
 library(lme4)
 trans = function(x) exp(x) / (1 + exp(x))
@@ -144,61 +144,6 @@ summary(fglm)
 
 
 
-glm1 = glmer(resp ~  1+ (1|study), data=datind, family="binomial" )
-summary(glm1)
-trans = function(x) exp(x) / (1 + exp(x))
-trans(3.9923)
-trans(3.9923 - 1.96*0.3782)
-trans(3.9923 + 1.96*0.3782)
-
-
-
-fixef(glm1)
-ranef(glm1)
-?ranef
-
-var(ranef(glm1)$study$"(Intercept)")
-
-# I need to account for the variance of the random effect
-summary(glm1)
-
-# I sum the variance of fixed effect and random effect
-0.3782^2 + 1.613
-# and take the sqrt to have the sd
-sqrt(0.3782^2 + 1.613)
-trans(3.9923)
-trans(3.9923 - 1.96*(1.325))
-trans(3.9923 + 1.96*(1.325))
-
-
-m1= glm(resp ~  study, data=datind, family="binomial" )
-summary(m1)
-
-fix=c(m1$coefficients[1], m1$coefficients[1]+m1$coefficients[-1])
-length(rand)
-rand = fixef(glm1)+ranef(glm1)$study
-
-plot(fix, rand$"(Intercept)")
-
-trans(fixef(glm1)+ranef(glm1)$study)
-mean(ranef(glm1)$study$"(Intercept)")
-var(ranef(glm1)$study$"(Intercept)")
-sd(ranef(glm1)$study$"(Intercept)")
-
-
-
-
-
-### try a meta-analysis only on RCT
-dat_rct = datind[datind$type=="rct",]
-summary(dat_rct)
-glm2 = glmer(resp ~  1+ (1|study), data=dat_rct, family="binomial" )
-summary(glm2)
-trans = function(x) exp(x) / (1 + exp(x))
-trans(4.3351)
-sqrt(0.4955^2 + 1.54)
-trans(4.3351 - 1.96*1.336)
-trans(4.3351 + 1.96*1.336)
 
 
 #######################################
